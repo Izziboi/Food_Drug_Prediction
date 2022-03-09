@@ -44,27 +44,51 @@ The substances whose fingerprints were acquired includes some foods, foodstuffs 
 With the data, a number of functions were created to manage the contents of the data such that the expected results could be achieved as closely as possible. The functions that do the work are as follows:<br>
 
 **- val_ave():** This function performs element-wise addition and averaging of the numerical values of the datasets, substance-by-substance. At the end it produces a dataset of these values together with their corresponding substances.<br>
-It takes a dataframe of fingerprints (numerical values) with their corresponding substance labels. One important condition is that all the substances must be scanned for equal number of times using the hardware.<br>
-Its return value is a list of lists of the averaged datasets, with their corresponding substance labels.
+It takes a dataframe of fingerprints (numerical values) with their corresponding substance labels. One important condition is that all the substances must be scanned for equal number of times using the hardware as can be seen below.<br>
+  
+![fig2](https://user-images.githubusercontent.com/44449730/157499258-6a50f328-6e59-432c-9a3f-7aedf478ec37.JPG)<br>
+
+Its return value is a list of lists of the averaged datasets, with their corresponding substance labels as can be seen below.<br>
+ 
+![fig3](https://user-images.githubusercontent.com/44449730/157499401-9fe04a5f-897c-4402-9229-4722f6aee860.JPG)
 
 **- list_diffs():** This function takes the element-wise differences between any new dataset of a substance and all the existing averaged datasets from the database. The intention is to see how close these differences are to zero. If the new dataset is exactly of equal values with any dataset in the list of lists, then the resulting difference dataset would come down to zeros.<br>
 Thereafter, a threshold of 100 was used to take the element-wise difference of all these values again. By so doing, the closer the values are to 100, the more likely that substance is to be predicted. Finally their absolute values were taken.<br>
 **Note: The value of the threshold can be changed at will.**<br>
 It takes:<br> 
 - obj_name: A dataset of a substance acquired in the form of a list of numerical values. Note that the length of this list must be equal with the number of columns of the database, excluding the substance name.<br>
-- vals_lists: The output of the 'val_ave' function. This is usually a constant parameter.<br>
-Its return value is a list of lists containing the absolute values of the element-wise differences between the new object dataset and the existing datasets from the 'val_ave' function; and again between the threshold value and the resultant datasets.
+For example: honey = [70, 141, 101, 155, 1514, 3401, 189, 270, 1564, 261, 262, 157, 186, 255, 244, 163, 2468, 673]<br>
+- vals_lists: The output of the 'val_ave' function, shown above. This is usually a constant parameter.<br>
+Its return value is a list of lists containing the absolute values of the element-wise differences between the new object dataset and the existing datasets from the 'val_ave' function; and again between the threshold value and the resultant datasets. See below<br>
+
+![fig4](https://user-images.githubusercontent.com/44449730/157500350-5448bfd6-40e6-4544-be4e-da5723114155.JPG)<br>
 
 **- pairing():** This function takes the average of each list in the resultant list of lists from the 'list_diffs' function. Each of these average values is paired with its corresponding name label. The idea is that the most likely substance would have an average value very close to the threshold (100 in this case).<br>
-It takes the output of the 'list_diffs' function as a constant parameter and returns a list of pairs of lists containing the average values and their corresponding object name labels.
+It takes the output of the 'list_diffs' function as a constant parameter (shown above) and returns a list of pairs of lists containing the average values and their corresponding object name labels. See below.<br>
+ 
+![fig5](https://user-images.githubusercontent.com/44449730/157500834-3dbfa017-3940-4d8b-a4d8-5f313849764a.JPG)<br>
 
 **- collections():** This function carries out the prediction proper, by comparing the individual average values with a range, set with 'min' and 'max' variables.<br> 
 **Note: The value of these variables can be changed at will.** They determine how many substances that can be suggested as the likely matching substances each time a prediction is made.<br>
-This function takes 'div_lists' as a constant parameter. It is the output of the 'pairing' function.<br>
+This function takes 'div_lists' as a constant parameter. It is the output of the 'pairing' function shown above.<br>
 It returns the following:<br>
-- A list of lists of the predicted substance(s) with their averaged values.<br>
-- A list of lists of the unlikely substances with their averaged values.<br>
-- A plot of the predicted substance(s) with their averaged values.<br>
-- A plot of the unlikely substances with their averaged values.<br>
+- A list of lists of the predicted substance(s) with their averaged values. See below.<br>
+![fig6](https://user-images.githubusercontent.com/44449730/157501716-bb59e240-0935-4a96-8047-c3dab08f8267.JPG)<br>
+
+- A list of lists of the unlikely substances with their averaged values. See below.
+  
+![fig7](https://user-images.githubusercontent.com/44449730/157501958-a15ca141-9ec1-4074-b851-d03400e42bf3.JPG)<br>
+
+- A plot of the predicted substance(s) with their averaged values. See below.<br>
+![fig8](https://user-images.githubusercontent.com/44449730/157502174-72ed0a84-31a2-4369-bb07-8ea81eaf4da0.JPG)<br>
+
+- A plot of the unlikely substances with their averaged values. See below.<br>
+![fig9](https://user-images.githubusercontent.com/44449730/157502332-73805582-e3df-403d-9d69-d71e08eabde4.JPG)<br>
   
 </p>
+
+## Comparison With Sklearn Algorithms
+## How To Run the Program
+## Summary (including downside, eg not able to split and fit, using all data to train. May be improved upon)
+## Conclusion
+## References
