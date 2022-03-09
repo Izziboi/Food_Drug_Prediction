@@ -84,7 +84,7 @@ It returns the following:<br>
 
 - A plot of the unlikely substances with their averaged values. See below.<br>
 ![fig9](https://user-images.githubusercontent.com/44449730/157502332-73805582-e3df-403d-9d69-d71e08eabde4.JPG)<br>
-  
+
 </p>
 
 ## Comparison With Sklearn Algorithms
