@@ -230,7 +230,7 @@ It is one of the fingerprints of '3.5% Fat Milk'. If you add 100 to each of the 
 Conversely, this algorithm could give a fair idea of what went on during the classification and eventual prediction. These visualizations are the core objectives of this project<br>
 </p>
 
-## Summary (including downside, eg not able to split and fit, using all data to train. May be improved upon)
+## Summary
 <p align="justify">
 From the foregoing, the behaviours of the two different algorithms have been demonstrated. The random forest predicts very well, more especially if the test fingerprints are very similar to the ones in that database but does not give an iindication about an unknown substance. Again, it does not give an idea of what goes on during the classification and eventual prediction of the test substance.<br>
 On the other hand, this algorithm can present a fair idea of what goes on during the classification and prediction processes. It also shows other substances that are chemically related to the predicted substance. Moreover, it is capable of identifying an unknown suubstance when tested. Meanwhile this property depends on the values of 'min' and 'max'.
@@ -240,4 +240,19 @@ On the other hand, this algorithm can present a fair idea of what goes on during
 <p align="justify">
 It is good to point out that this work is not presented as a perfect work already. It is just an implementation of a conceptual idea which can still be worked upon for possible improvements. It is my belief that large packages such as the sklearn started this small. Therefore, any contribution that can improve the algorithm is highly welcome. So far, the algorithm does not split datasets into train and test components. In other words, it uses the entire datasets for training. It also does not fit separately like in the case of random forest. It simply goes ahead to make predictions. Furthermore, it does not calculate accuracy or percentage error. These are considered as further works that can be added in future; but for the purpose of this project which is time-bound, the work can safely be said to be sufficient at this point. On the whole, it has achieved the conceived concept and performs favorably too.
 </p>
+
+## Acknowledgements
+<p align="justify">
+I thank God so much for enabling me to come to this point of the program. It has been long-awaited. It was even further lengthened by the tragic breakdown of my laptop, in which case I lost many of my files including the first version of this work. It also came with a cost because I had to pay extra $100 for another one-month subscription to enable me finish the program. In all things I thank God.<br>
+I thank the Udacity team for being very responsive with friendly listening ears. I am ever grateful.<br>
+My appreciation also goes to all the sources I got inspiration and information that enabled me to complete this assignment. The sklearn documentation was very helpful, as well as the numpy documentation, among others.<br>
+I would like to end by thanking Mosh Hamedani. He is my first python teacher and what I learnt from him gave me a good footing to cope with this data science program. My sincere gratitude goes to all of you my dear teachers.
+</p>
+
 ## References
+1. G. S. Bumbrah and R. M. Sharma, “Raman spectroscopy – Basic principle, instrumentation and selected applications for the characterization of drugs of abuse,” Egypt. J. Forensic Sci., vol. 6, no. 3, pp. 209–215, 2016.
+2. S. Developers, “Sk-Learn,” 2019.
+3. https://classroom.udacity.com/nanodegrees/nd025/parts/059c574b-e0d0-4fa7-8acd-47d9df9d53b6/modules/b0daab3f-5ffc-4ce1-af45-0945e87321ad/lessons/7420189a-47a9-43ad-9154-c9c0b98fdce5/concepts/a812e8b0-031e-463d-b5db-999a635a340e
+4. https://numpy.org/doc/stable/reference/generated/numpy.add.html
+5. https://docs.python.org/3/tutorial/errors.html
+6. https://codewithmosh.com/courses/enrolled/417695
