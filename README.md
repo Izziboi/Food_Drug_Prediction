@@ -4,18 +4,22 @@
 <h3><p align="center">March 2022</p></h1>
 
 ## Introduction
-<p align="justify">This is the Capstone Project of the Udacity Nanodegree Program. In this project, there are different options to choose from, including embarking on a project of personal interest. I decided to embark on a project of personal interest. This project aims at developing a prediction algorithm for identifying foods, foodstuffs and drugs. I became interested in this work following my previous work on building a system that can identify foods and drugs. My interest in this field was triggered by the prevailing cases of food and drug adultration in our societies. I felt that it would be a good idea to develop a mobile, cheap and non-invasive device that can help consumers authenticate what they buy for consumption.<br>
+<p align="justify">
+This is the Capstone Project of the Udacity Nanodegree Program. In this project, there are different options to choose from, including embarking on a project of personal interest. I decided to embark on a project of personal interest. This project aims at developing a prediction algorithm for identifying foods, foodstuffs and drugs. I became interested in this work following my previous work on building a system that can identify foods and drugs. My interest in this field was triggered by the prevailing cases of food and drug adultration in our societies. I felt that it would be a good idea to develop a mobile, cheap and non-invasive device that can help consumers authenticate what they buy for consumption.<br>
 The data used in this work were acquired live using an 18-channel sensor produced by Austriamicrosystems (AMS). These 18 channels were achieved by implementing semiconductor filters on the sensors which are capable of filtering from visible light to near Infrared bands.<br>
 The technology behind this, is that of spectroscopy. Spectroscopy is the technique whereby electromagnetic waves interact with matter, with the intention of receiving reflected signals from the substance. These reflected signals carry the identity of the sample substance, commonly referred to as 'fingerprint'. These fiingerprints come in the form of lists of 18 values and it is expected that the fingerprint of a given substance under the influence of a given electromagnetic signal, will remain fairly the same. If there would be differences, it should not be too wide.<br>
 Each substance is scanned a number of times and all the fingerprints saved in the database for onward training of the prediction model and final identification. It is common knowledge that the more the data about the substances, the more accurate the model will be in its prediction, hence each substance was scanned for 30 times.<br>
-By the foregoing therefore, this work stems from a typical electrical and electronic engineering work where the data were acquired with a hardware device. However, I decided to import this hardware work into this all-software based work because of some challenges I observed while using typical sklearn algorithms to make predictions. These are the contents of the next section.</p>
+By the foregoing therefore, this work stems from a typical electrical and electronic engineering work where the data were acquired with a hardware device. However, I decided to import this hardware work into this all-software based work because of some challenges I observed while using typical sklearn algorithms to make predictions. These are the contents of the next section.
+</p>
 
 ## Problem Statement
-<p align="justify">Going by the nature of data I was dealing with, my work actually has to do with supervised learning - all the datasets are labelled. For the fact that predictions have to be made by the system stuying the data patterns, sklearn calssification algorithms were the best options for me. As a result, Decision Tree and Random Forest classifiers were found more suitable. On one hand, decision tree exhibited inaccurate predition when the volume of data increased while the random forest demonstrated high-level consistency in prediction. On the other hand, both of them showed some behaviours which I consider not very satisfactory. It is these common behaviours that prompted me to go into this work and they include:<br>
+<p align="justify">
+Going by the nature of data I was dealing with, my work actually has to do with supervised learning - all the datasets are labelled. For the fact that predictions have to be made by the system stuying the data patterns, sklearn calssification algorithms were the best options for me. As a result, Decision Tree and Random Forest classifiers were found more suitable. On one hand, decision tree exhibited inaccurate predition when the volume of data increased while the random forest demonstrated high-level consistency in prediction. On the other hand, both of them showed some behaviours which I consider not very satisfactory. It is these common behaviours that prompted me to go into this work and they include:<br>
   
 - There is no visualization to show at least, the most probable substances that have fingerprints that are close to the one under analysis. Only one substance is predicted at a time given as output and the user has no idea how close the fingerprints of other substances in the database are to the one under study.<br>
 - If a substance that is not yet included in the database is analyzed, these algorithms would just predict any of the existing substances. This gives a wrong impression.<br>
-It is these two down sides that this works seeks to address and below is the procedure followed.</p>
+It is these two down sides that this works seeks to address and below is the procedure followed.
+</p>
 
 ## Python Modules Used
 The python modules used in this work include:<br>
@@ -36,7 +40,8 @@ The work was organized using the following files:<br><br>
 **- pred_class.ipynb:** This file contains the class implementation of the solution. It is also a jupyter notebook file.
 
 ## Methodology
-<p align="justify">It has already been mentioned that thhis is an integrated hardware plus software work that was imported into this typical software work. Therefore, the first step was to acquire the data and save them in the database using the hardware arrangement shown below.<br>
+<p align="justify">
+It has already been mentioned that thhis is an integrated hardware plus software work that was imported into this typical software work. Therefore, the first step was to acquire the data and save them in the database using the hardware arrangement shown below.<br>
 
 ![fig1](https://user-images.githubusercontent.com/44449730/157485769-8a274b54-8bd6-4bd4-a57b-ea710872e491.JPG)<br>
 
@@ -85,10 +90,95 @@ It returns the following:<br>
 - A plot of the unlikely substances with their averaged values. See below.<br>
 ![fig9](https://user-images.githubusercontent.com/44449730/157502332-73805582-e3df-403d-9d69-d71e08eabde4.JPG)<br>
 
+This is how the work was basically done; but to run the program, the procedure below may be followed.
+</p>
+
+## How To Run the Program
+<p align="justify">
+As mentioned earlier, the work is organized in two formats - functions and class. Their applications are almost the same except that in the function implementation a user interacts directly with the invidual functions while in the class implementation the user creates an instance of the class and thereafter accesses the functions indirectly. Moreover, while using the class implementation, the user inputs all the necessary parameters to the class only once and subsequently call the functions to view their outputs, if necessary. Therefore the class implementation is more compact and would be used in this demonstration.
+
+- **Create an instance of the class**<br>
+
+```preds = Predicts()```
+
+- **Input necessary parameters**<br>
+
+```preds = Predicts('objdbase.csv', milk3, min=50, max=280)```
+  
+where milk3 is a substance fingerprint: milk3 = [129, 235, 178, 299, 3593, 7257, 434, 516, 15344, 605, 1823, 327, 351, 266, 366, 307, 5096, 1311]
+  
+- **View outputs of the individual functions**<br>
+- **val_ave function**<br>
+  
+```
+preds_val = preds.val_ave()
+print(preds_val)
+```
+
+And below is the output - **a list of lists of the averaged datasets, with their corresponding substance labels**:<br>
+
+![image](https://user-images.githubusercontent.com/44449730/157648215-5acd6365-36df-431d-9e52-2c168cb4bef3.png)
+
+- **list_diffs function**<br>
+  
+```
+preds_list = preds.list_diffs()
+print(preds_list)
+```
+  
+And below is the output - **a list of lists containing the absolute values of the element-wise differences between the new object dataset and the existing datasets from the 'val_ave' function; and again between the threshold value and the resultant datasets**:<br>
+  
+![image](https://user-images.githubusercontent.com/44449730/157649284-d09fd8f9-a709-401f-889a-6bc076e36b3f.png)
+
+Notice that most of the elements of the fingerprint of '3.5% Fat Milk' are now very close to the threshold value of 100.<br>
+  
+- **pairing function**<br>
+  
+```
+preds_pair = preds.pairing()
+print(preds_pair)
+```
+  
+And below is the output - **a list of pairs of lists containing the average values and their corresponding object name labels**:<br>
+  
+![image](https://user-images.githubusercontent.com/44449730/157650817-c111a22a-204a-4f37-81da-9f6e72f25202.png)
+
+Notice that the value of '3.5% Fat Milk' is just a little above the threshold value of 100 (precisely 102).<br>
+  
+- **collections function**<br>
+This function returns two values and so is unpacked into two varibles as can be seen below.<br>
+
+```
+preds_collect1, preds_collect2 = preds.collections()
+print(preds_collect1)
+print(preds_collect2)
+```
+
+'preds_collect1' contains more likely substance(s) while 'preds_collect2' contains less likely substances.<br>
+And below are the outputs:<br> 
+**More likely substance(s)**:<br>
+![image](https://user-images.githubusercontent.com/44449730/157652334-026f6273-46aa-4768-b96e-e0d239d5d160.png)
+
+**Plot of more likely substance(s)**:<br>
+![image](https://user-images.githubusercontent.com/44449730/157652626-bdc22846-f0eb-4108-862e-64ac6a287a43.png)
+
+**Less likely substance(s)**:<br>
+![image](https://user-images.githubusercontent.com/44449730/157652752-e63a6e9b-cd7b-47c1-a3ee-246d9abdf602.png)
+
+**Plot of less likely substance(s)**:<br>
+![image](https://user-images.githubusercontent.com/44449730/157653612-fa78d75b-9163-45e1-bf48-4feae10d9cb9.png)
+
+More about using this class implementation is that if a user inputs the wrong formats of parameters, it will throw an error message. For instance:<br>
+- The fingerprint must be a list of 18 int elements.<br>
+- The 'min' or 'max' value must not be negative.<br>
+- The 'min' value must not be greater than the 'max vlaue'.<br>
+The next section tries to compare and contrast this work with a typical sklearn algorithm.
 </p>
 
 ## Comparison With Sklearn Algorithms
-## How To Run the Program
+<p align="justify">
+
+</p>
 ## Summary (including downside, eg not able to split and fit, using all data to train. May be improved upon)
 ## Conclusion
 ## References
