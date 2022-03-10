@@ -232,7 +232,7 @@ Conversely, this algorithm could give a fair idea of what went on during the cla
 
 ## Summary
 <p align="justify">
-From the foregoing, the behaviours of the two different algorithms have been demonstrated. The random forest predicts very well, more especially if the test fingerprints are very similar to the ones in that database but does not give an iindication about an unknown substance. Again, it does not give an idea of what goes on during the classification and eventual prediction of the test substance.<br>
+From the foregoing, the behaviours of the two different algorithms have been demonstrated. The random forest predicts very well, more especially if the test fingerprints are very similar to the ones in the database but does not give an indication about an unknown substance. Again, it does not give an idea of what goes on during the classification and eventual prediction of the test substance.<br>
 On the other hand, this algorithm can present a fair idea of what goes on during the classification and prediction processes. It also shows other substances that are chemically related to the predicted substance. Moreover, it is capable of identifying an unknown suubstance when tested. Meanwhile this property depends on the values of 'min' and 'max'.
 </p>
 
