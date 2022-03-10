@@ -222,11 +222,16 @@ This algorithm returned:
 ![image](https://user-images.githubusercontent.com/44449730/157672940-ca554a74-bf1a-4f5b-bf19-9643d5951af9.png)<br>
 ![image](https://user-images.githubusercontent.com/44449730/157673071-f33098c7-cd39-4f3b-a98e-daa68725f8ab.png)
 
-The prediction result of the random forest algorithm is wrong in this situation. Check out the fingerprint below:
+The prediction result of the random forest algorithm is wrong in this case.<br> 
+Check out the fingerprint below:
 
 [131, 236, 178, 298, 3555, 7210, 447, 526, 16311, 625, 1933, 333, 363, 278, 377, 319, 5101, 1319]
 
-It is one of the fingerprints of '3.5% Fat Milk'. If you add 100 to each of the elements, you get the unknown fingerprint used in the test above. Therefore it is so far an unknown substance, until it is included iin the database with its label. What I expected the random forest algorithm to do is to give an indication that the fingerprint does not match any of them in the database; but it could not.<br>
+It is one of the fingerprints of '3.5% Fat Milk'. If you add 100 to each of the elements, you get the unknown fingerprint used in the test above. You can see it again below.<br>
+
+[231, 336, 278, 398, 3655, 7310, 547, 626, 16411, 725, 2033, 433, 463, 378, 477, 419, 5201, 1419]
+
+Therefore it is so far an unknown substance, until it is included in the database with its label. What I expected the random forest algorithm to do is to give an indication that the fingerprint does not match any of them in the database; but it could not.<br>
 Conversely, this algorithm could give a fair idea of what went on during the classification and eventual prediction. These visualizations are the core objectives of this project<br>
 </p>
 
