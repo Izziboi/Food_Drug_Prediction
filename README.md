@@ -145,7 +145,7 @@ And below is the output - **a list of pairs of lists containing the average valu
 Notice that the value of '3.5% Fat Milk' is just a little above the threshold value of 100 (precisely 102).<br>
   
 - **collections function:**<br>
-This function returns two values and so is unpacked into two varibles as can be seen below.<br>
+This function returns two values and so is unpacked into two variables as can be seen below.<br>
 
 ```
 preds_collect1, preds_collect2 = preds.collections()
