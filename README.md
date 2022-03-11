@@ -40,7 +40,7 @@ The work was organized using the following files:
 
 ## Methodology
 <p align="justify">
-It has already been mentioned that thhis is an integrated hardware plus software work that was imported into this typical software work. Therefore, the first step was to acquire the data and save them in the database using the hardware arrangement shown below.<br>
+It has already been mentioned that this is an integrated hardware plus software work that was imported into this typical software work. Therefore, the first step was to acquire the data and save them in the database using the hardware arrangement shown below.<br>
 
 ![fig1](https://user-images.githubusercontent.com/44449730/157485769-8a274b54-8bd6-4bd4-a57b-ea710872e491.JPG)<br>
 
