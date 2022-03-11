@@ -30,12 +30,11 @@ The python modules used in this work include:<br>
 - sklearn<br>
 
 ## Files in the Repository
-The work was organized using the following files:<br><br>
+The work was organized using the following files:
+
 - **objdbase.csv:** This is the database file of the work. The data are saved in the csv format.
 
-
 - **food_drug_predict.ipynb:** This file contains visualizations of the data and function-by-function implementation of the solution. It is a jupyter notebook file.
-
 
 - **pred_class.ipynb:** This file contains the class implementation of the solution. It is also a jupyter notebook file.
 
