@@ -108,7 +108,7 @@ As mentioned earlier, the work is organized in two formats - functions and class
 where milk3 is a substance fingerprint: milk3 = [129, 235, 178, 299, 3593, 7257, 434, 516, 15344, 605, 1823, 327, 351, 266, 366, 307, 5096, 1311]
   
 - **View outputs of the individual functions**<br>
-- **val_ave function**<br>
+- **val_ave function:**<br>
   
 ```
 preds_val = preds.val_ave()
@@ -119,7 +119,7 @@ And below is the output - **a list of lists of the averaged datasets, with their
 
 ![image](https://user-images.githubusercontent.com/44449730/157648215-5acd6365-36df-431d-9e52-2c168cb4bef3.png)
 
-- **list_diffs function**<br>
+- **list_diffs function:**<br>
   
 ```
 preds_list = preds.list_diffs()
@@ -132,7 +132,7 @@ And below is the output - **a list of lists containing the absolute values of th
 
 Notice that most of the elements of the fingerprint of '3.5% Fat Milk' are now very close to the threshold value of 100.<br>
   
-- **pairing function**<br>
+- **pairing function:**<br>
   
 ```
 preds_pair = preds.pairing()
@@ -145,7 +145,7 @@ And below is the output - **a list of pairs of lists containing the average valu
 
 Notice that the value of '3.5% Fat Milk' is just a little above the threshold value of 100 (precisely 102).<br>
   
-- **collections function**<br>
+- **collections function:**<br>
 This function returns two values and so is unpacked into two varibles as can be seen below.<br>
 
 ```
@@ -156,16 +156,16 @@ print(preds_collect2)
 
 'preds_collect1' contains more likely substance(s) while 'preds_collect2' contains less likely substances.<br>
 And below are the outputs:<br> 
-**More likely substance(s)**:<br>
+**More likely substance(s):**<br>
 ![image](https://user-images.githubusercontent.com/44449730/157652334-026f6273-46aa-4768-b96e-e0d239d5d160.png)
 
-**Plot of more likely substance(s)**:<br>
+**Plot of more likely substance(s):**<br>
 ![image](https://user-images.githubusercontent.com/44449730/157652626-bdc22846-f0eb-4108-862e-64ac6a287a43.png)
 
-**Less likely substance(s)**:<br>
+**Less likely substance(s):**<br>
 ![image](https://user-images.githubusercontent.com/44449730/157652752-e63a6e9b-cd7b-47c1-a3ee-246d9abdf602.png)
 
-**Plot of less likely substance(s)**:<br>
+**Plot of less likely substance(s):**<br>
 ![image](https://user-images.githubusercontent.com/44449730/157653612-fa78d75b-9163-45e1-bf48-4feae10d9cb9.png)
 
 More about using this class implementation is that if a user inputs the wrong formats of parameters, it will throw an error message. For instance:<br>
