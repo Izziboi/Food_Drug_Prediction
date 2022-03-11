@@ -231,7 +231,7 @@ It is one of the fingerprints of '3.5% Fat Milk'. If you add 100 to each of the 
 [231, 336, 278, 398, 3655, 7310, 547, 626, 16411, 725, 2033, 433, 463, 378, 477, 419, 5201, 1419]
 
 Therefore it is so far an unknown substance, until it is included in the database with its label. What I expected the random forest algorithm to do is to give an indication that the fingerprint does not match any of them in the database; but it could not.<br>
-Conversely, this algorithm could give a fair idea of what went on during the classification and eventual prediction. These visualizations are the core objectives of this project<br>
+Conversely, this algorithm could give a fair idea of what went on during the classification and eventual prediction. These visualizations are the core objectives of this project.<br>
 </p>
 
 ## Summary
