@@ -31,13 +31,13 @@ The python modules used in this work include:<br>
 
 ## Files in the Repository
 The work was organized using the following files:<br><br>
-**- objdbase.csv:** This is the database file of the work. The data are saved in the csv format.
+- **objdbase.csv:** This is the database file of the work. The data are saved in the csv format.
 
 
-**- food_drug_predict.ipynb:** This file contains visualizations of the data and function-by-function implementation of the solution. It is a jupyter notebook file.
+- **food_drug_predict.ipynb:** This file contains visualizations of the data and function-by-function implementation of the solution. It is a jupyter notebook file.
 
 
-**- pred_class.ipynb:** This file contains the class implementation of the solution. It is also a jupyter notebook file.
+- **pred_class.ipynb:** This file contains the class implementation of the solution. It is also a jupyter notebook file.
 
 ## Methodology
 <p align="justify">
@@ -48,7 +48,7 @@ It has already been mentioned that thhis is an integrated hardware plus software
 The substances whose fingerprints were acquired includes some foods, foodstuffs and a drug, as will be shown later.<br>
 With the data, a number of functions were created to manage the contents of the data such that the expected results could be achieved as closely as possible. The functions that do the work are as follows:<br>
 
-**- val_ave():** This function performs element-wise addition and averaging of the numerical values of the datasets, substance-by-substance. At the end it produces a dataset of these values together with their corresponding substances.<br>
+- **val_ave():** This function performs element-wise addition and averaging of the numerical values of the datasets, substance-by-substance. At the end it produces a dataset of these values together with their corresponding substances.<br>
 It takes a dataframe of fingerprints (numerical values) with their corresponding substance labels. One important condition is that all the substances must be scanned for equal number of times using the hardware as can be seen below.<br>
   
 ![fig2](https://user-images.githubusercontent.com/44449730/157499258-6a50f328-6e59-432c-9a3f-7aedf478ec37.JPG)<br>
@@ -57,7 +57,7 @@ Its return value is a list of lists of the averaged datasets, with their corresp
  
 ![fig3](https://user-images.githubusercontent.com/44449730/157499401-9fe04a5f-897c-4402-9229-4722f6aee860.JPG)
 
-**- list_diffs():** This function takes the element-wise differences between any new dataset of a substance and all the existing averaged datasets from the database. The intention is to see how close these differences are to zero. If the new dataset is exactly of equal values with any dataset in the list of lists, then the resulting difference dataset would come down to zeros.<br>
+- **list_diffs():** This function takes the element-wise differences between any new dataset of a substance and all the existing averaged datasets from the database. The intention is to see how close these differences are to zero. If the new dataset is exactly of equal values with any dataset in the list of lists, then the resulting difference dataset would come down to zeros.<br>
 Thereafter, a threshold of 100 was used to take the element-wise difference of all these values again. By so doing, the closer the values are to 100, the more likely that substance is to be predicted. Finally their absolute values were taken.<br>
 **Note: The value of the threshold can be changed at will.**<br>
 It takes:<br> 
@@ -68,12 +68,12 @@ Its return value is a list of lists containing the absolute values of the elemen
 
 ![fig4](https://user-images.githubusercontent.com/44449730/157500350-5448bfd6-40e6-4544-be4e-da5723114155.JPG)<br>
 
-**- pairing():** This function takes the average of each list in the resultant list of lists from the 'list_diffs' function. Each of these average values is paired with its corresponding name label. The idea is that the most likely substance would have an average value very close to the threshold (100 in this case).<br>
+- **pairing():** This function takes the average of each list in the resultant list of lists from the 'list_diffs' function. Each of these average values is paired with its corresponding name label. The idea is that the most likely substance would have an average value very close to the threshold (100 in this case).<br>
 It takes the output of the 'list_diffs' function as a constant parameter (shown above) and returns a list of pairs of lists containing the average values and their corresponding object name labels. See below.<br>
  
 ![fig5](https://user-images.githubusercontent.com/44449730/157500834-3dbfa017-3940-4d8b-a4d8-5f313849764a.JPG)<br>
 
-**- collections():** This function carries out the prediction proper, by comparing the individual average values with a range, set with 'min' and 'max' variables.<br> 
+- **collections():** This function carries out the prediction proper, by comparing the individual average values with a range, set with 'min' and 'max' variables.<br> 
 **Note: The value of these variables can be changed at will.** They determine how many substances that can be suggested as the likely matching substances each time a prediction is made.<br>
 This function takes 'div_lists' as a constant parameter. It is the output of the 'pairing' function shown above.<br>
 It returns the following:<br>
