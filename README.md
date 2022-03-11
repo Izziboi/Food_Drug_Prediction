@@ -247,7 +247,7 @@ It is good to point out that this work is not presented as a perfect work alread
 
 ## Acknowledgements
 <p align="justify">
-I thank God so much for enabling me to come to this point of the program. It has been long-awaited. It was even further lengthened by the tragic breakdown of my laptop, in which case I lost many of my files including the first version of this work. It also came with a cost because I had to pay extra $100 for another one-month subscription to enable me finish the program. In all things I thank God.<br>
+I thank God so much for enabling me to record this success in this program. It has been long-awaited. It was even further lengthened by the tragic breakdown of my laptop, in which case I lost many of my files including the first version of this work. It also came with a cost because I had to pay extra $100 for another one-month subscription to enable me finish the program. In all things I thank God.<br>
 I thank the Udacity team for being very responsive with friendly listening ears. I am ever grateful.<br>
 My appreciation also goes to all the sources I got inspiration and information that enabled me to complete this assignment. The sklearn documentation was very helpful, as well as the numpy documentation, among others.<br>
 I would like to end by thanking Mosh Hamedani. He is my first python teacher and what I learnt from him gave me a good footing to cope with this data science program. My sincere gratitude goes to all of you my dear teachers.
