@@ -1,11 +1,10 @@
-<h1><p align="center">Capstone Project on Data Science Nanodegree</p></h1>
 <h1><p align="center">Food and Drug Prediction</p></h1>
 <h3><p align="center">Israel Agwu Etu</p></h1>
 <h3><p align="center">March 2022</p></h1>
 
 ## Introduction
 <p align="justify">
-This is the Capstone Project of the Udacity Nanodegree Program. In this project, there are different options to choose from, including embarking on a project of personal interest. I decided to embark on a project of personal interest. This project aims at developing a prediction algorithm for identifying foods, foodstuffs and drugs. I became interested in this work following my previous work on building a system that can identify foods and drugs. My interest in this field was triggered by the prevailing cases of food and drug adultration in our societies. I felt that it would be a good idea to develop a mobile, cheap and non-invasive device that can help consumers authenticate what they buy for consumption.<br>
+This project aims at developing a prediction algorithm for identifying foods, foodstuffs and drugs. I became interested in this work following my previous work on building a system that can identify foods and drugs. My interest in this field was triggered by the prevailing cases of food and drug adultration in our societies. I felt that it would be a good idea to develop a mobile, cheap and non-invasive device that can help consumers authenticate what they buy for consumption.<br>
 The data used in this work were acquired live using an 18-channel sensor produced by Austriamicrosystems (AMS). These 18 channels were achieved by implementing semiconductor filters on the sensors which are capable of filtering from visible light to near Infrared bands.<br>
 The technology behind this, is that of spectroscopy. Spectroscopy is the technique whereby electromagnetic waves interact with matter, with the intention of receiving reflected signals from the substance. These reflected signals carry the identity of the sample substance, commonly referred to as 'fingerprint'. These fiingerprints come in the form of lists of 18 values and it is expected that the fingerprint of a given substance under the influence of a given electromagnetic signal, will remain fairly the same. If there would be differences, it should not be too wide.<br>
 Each substance is scanned a number of times and all the fingerprints saved in the database for onward training of the prediction model and final identification. It is common knowledge that the more the data about the substances, the more accurate the model will be in its prediction, hence each substance was scanned for 30 times.<br>
@@ -248,8 +247,7 @@ For a blogpost version of this work, please visit https://medium.com/@israeletu/
 
 ## Acknowledgements
 <p align="justify">
-I thank God so much for enabling me to record this success in this program. It has been long-awaited. It was even further lengthened by the tragic breakdown of my laptop, in which case I lost many of my files including the first version of this work. It also came with a cost because I had to pay extra $100 for another one-month subscription to enable me finish the program. In all things I thank God.<br>
-I thank the Udacity team for being very responsive with friendly listening ears. I am ever grateful.<br>
+I thank God so much for enabling me to record this success in this program. It has been long-awaited. It was even further lengthened by the tragic breakdown of my laptop, in which case I lost many of my files including the first version of this work. In all things I thank God.<br>
 My appreciation also goes to all the sources I got inspiration and information that enabled me to complete this assignment. The sklearn documentation was very helpful, as well as the numpy documentation, among others.<br>
 I would like to end by thanking Mosh Hamedani. He is my first python teacher and what I learnt from him gave me a good footing to cope with this data science program. My sincere gratitude goes to all of you my dear teachers.
 </p>
